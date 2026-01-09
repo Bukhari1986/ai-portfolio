@@ -1,0 +1,112 @@
+site_name: Hezbullah Shah (Data Scientist) Portfolio
+site_description: "A collection of my projects and works."
+site_author: "Mr Hezbu"
+site_url: https://your-site-url.com
+
+repo_name: MrHezbu/portfolio
+repo_url: https://github.com/MrHezbu/portfolio
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - Projects: projects.md
+    # - Project 1: projects/awesome-web-app.md
+    # - Project 2: projects/data-analysis-tool.md
+  - Blog: blog/index.md
+  - Skills: skills.md
+  - Resume: resume.md
+  - About Me: about.md
+
+theme:
+  name: material
+  language: en
+  logo: ./assets/logo.png   # optional
+  favicon: assets/favicon.ico
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+    - header.autohide
+
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  font:
+    text: Roboto
+    code: JetBrains Mono
+
+plugins:
+  - search
+  - blog
+  - tags
+  - social
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+            docstring_style: google
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - def_list
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/MrHezbu
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/your-profile
+    - icon: fontawesome/brands/kaggle
+      link: https://kaggle.com/your-profile
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/your-handle
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
